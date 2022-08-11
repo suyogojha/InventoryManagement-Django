@@ -1,0 +1,51 @@
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap.min.css' %}">
+
+    <!-- Main CSS, then Sidebar CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">    
+    
+    <title>IMS - Logout</title>
+
+</head>
+
+<body>
+
+    <div class="align-middle" style="color: #607d8b; font-style: bold; font-size: 3rem;">Inventory Management System</div>
+    <br>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+        
+            <h2 class="align-middle" style="color: #494949;">You have been logged out! Thank you for using IMS</h2>
+            <div class="border-top pt-3 align-middle">
+                <a href="{% url 'login' %}"><button class="ml-2 btn btn-outline-secondary btn-lg">Log In Again</button></a> <br><br>
+                {# <button class="ml-2 ghost-red">Exit</button> #}
+            </div>
+    
+            <div class="align-middle"> <a href="{% url 'about' %}">About</a> </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'bootstrap/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'bootstrap/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
